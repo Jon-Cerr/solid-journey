@@ -40,7 +40,7 @@ $(function () {
     e.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: equipo - 100,
+        scrollTop: equipo - 80,
       },
       100
     );
@@ -50,7 +50,7 @@ $(function () {
     e.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: servicio - 100,
+        scrollTop: servicio - 80,
       },
       100
     );
@@ -60,7 +60,7 @@ $(function () {
     e.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: trabajo - 100,
+        scrollTop: trabajo - 80,
       },
       100
     );
@@ -70,7 +70,7 @@ $(function () {
     e.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: contacto - 100,
+        scrollTop: contacto - 80,
       },
       100
     );

@@ -60,3 +60,47 @@ menuLinks.forEach((menuLink) => {
     }
   });
 });
+
+new TypeIt("#type-job", {
+  speed: 50,
+  startDelay: 900,
+})
+  .type("Desarrollador", { delay: 100 })
+  .pause(300)
+  .type(" FrontEnd", { delay: 200 })
+  .pause(400)
+  .type(
+    ` <strong style="color: #508c8b; font-family: 'Courier New', Courier, monospace">JR</strong>`,
+    { delay: 400 }
+  )
+  .go();
+
+new TypeIt("#type-effect", {
+  speed: 50,
+  startDelay: 900,
+  loop: true,
+  loopDelay: 4000,
+})
+  .type("el entusiamo hará", { delay: 100 })
+  .move(-7, { delay: 100 })
+  .type("s", { delay: 400 })
+  .move(null, { to: "START", instant: true, delay: 300 })
+  .move(1, { delay: 200 })
+  .delete(1)
+  .type("E", { delay: 225 })
+  .pause(200)
+  .move(2, { instant: true })
+  .pause(200)
+  .move(10, { instant: true })
+  .move(5, { delay: 200 })
+  .pause(200)
+  .type(
+    ` más que el <strong style="color: #508c8b; font-family: 'Courier New', Courier, monospace">conocimiento</strong>`,
+    { delay: 400 }
+  )
+  .move(null, { to: "END" })
+  .pause(500)
+  .break({ delay: 500 })
+  .break({ delay: 500 })
+  .type("<em>- William Hazlitt</em>")
+  .go();
