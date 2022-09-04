@@ -138,6 +138,7 @@ nav .enlaces a {
   text-decoration: none;
   border-bottom: 3px solid transparent;
   color: inherit;
+  transition: 1s;
 }
 
 .nav-container {
@@ -420,7 +421,7 @@ footer .attribution a:hover {
   .enlaces {
     position: fixed;
     top: 80px;
-    background: #2c3e50;
+    background: #3a706e;
     left: 0;
     height: 100%;
     transition: 1s;
@@ -434,8 +435,15 @@ footer .attribution a:hover {
     height: 50px;
     padding: 20px;
     text-align: center;
-    background: #34495e;
+    background: #42817f;
     color: #fff;
+  }
+
+  .enlaces a:hover {
+    background: var(--color2);
+    padding: 1rem;
+    transition: 1s;
+    color: #000;
   }
 
   .textos > h1 {
