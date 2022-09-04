@@ -49,7 +49,6 @@ menu_btn.addEventListener("click", () => {
 const menuLinks = document.querySelectorAll('.enlaces a[href^="#"]');
 menuLinks.forEach((menuLink) => {
   menuLink.addEventListener("click", () => {
-    menu.style.width = "0%";
     menu.style.overflow = "hidden";
     closed = true;
   });
