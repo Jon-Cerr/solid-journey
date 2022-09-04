@@ -1,0 +1,480 @@
+:root {
+  --color1: #54bab9;
+  --color2: #9ed2c6;
+  --color3: #e9dac1;
+  --fondo: #fcf8f2;
+  --titulo: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --subtitulos: 18px;
+  --espacios-contenido: 45px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "open sans", Arial;
+  background: var(--fondo);
+}
+
+img {
+  vertical-align: top;
+}
+
+/* Preloader */
+
+.hidden {
+  overflow: hidden;
+}
+
+.centered {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #dfc;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(
+      to bottom,
+      var(--color1),
+      var(--color2),
+      var(--color3)
+    ),
+    url(../assets/fondo.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav1 {
+  background: transparent;
+  color: #fff;
+  height: 80px;
+  transition: 0.5s;
+}
+
+.nav2 {
+  background: var(--fondo);
+  height: 100px;
+  color: #000;
+  transition: 0.5s;
+}
+
+nav .enlaces a {
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+.nav-container {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a:hover {
+  border-bottom: 1px solid #1498a4;
+  transition: 0.6s;
+}
+
+.logo,
+.logo img {
+  height: 80px;
+}
+
+.icon {
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos > h1 {
+  font-size: 80px;
+}
+
+.textos > h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* Main */
+
+.container {
+  margin: auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container h3 {
+  font-size: var(--titulo);
+  color: var(--color1);
+  margin-bottom: var(--espacios);
+}
+
+.container p {
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.after::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card {
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 400px;
+}
+
+.people {
+  height: 80%;
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-team {
+  height: 20%;
+  width: 100%;
+  padding-inline-end: var(--espacios) 0;
+}
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../assets/portada-teclados.jpg);
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.box-services {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.box-services > h4 {
+  margin-bottom: var(--espacios);
+}
+
+.box-services p {
+  text-align: center;
+}
+
+.btn-work {
+  overflow: hidden;
+}
+
+.btn-work li {
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+  transition: 0.4s;
+}
+
+.btn-work li:hover {
+  background: var(--color1);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-work .active {
+  background: var(--color1);
+  color: #fff;
+}
+
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.work-gallery .cont-work {
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+}
+
+.img-work {
+  height: 90%;
+  width: 100%;
+}
+
+.img-work img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text-work {
+  height: 10%;
+}
+
+.text-work h4 {
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), 
+  url(../assets/portada-teclados.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marca-logo {
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+
+.marca-logo img {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.fa-brands {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
+
+footer p {
+  margin-top: 60px;
+}
+
+footer .attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  text-decoration: unset;
+  padding: 15px 0;
+}
+
+footer .attribution a {
+  text-decoration: none;
+  color: #c9e8e0;
+}
+
+footer .attribution a:visited {
+  color: #828c97;
+}
+
+footer .attribution a:hover {
+  color: #b9bec4;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --margenes: 30px;
+  }
+
+  .nav2 {
+    color: #fff;
+  }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .enlaces {
+    position: fixed;
+    top: 80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color: #fff;
+  }
+
+  .textos > h1 {
+    font-size: 70px;
+  }
+
+  .textos > h2 {
+    font-size: 35px;
+  }
+
+  .content-card {
+    width: 48%;
+    margin-bottom: var(--margenes);
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --espacios-contenido: 25px;
+  }
+
+  .content-card {
+    width: 90%;
+  }
+
+  .box-services {
+    width: 90%;
+    margin-bottom: var(--margenes);
+  }
+
+  .work-gallery .cont-work{
+    width: 85%;
+  }
+
+  .marca-logo {
+    width: 80%;
+  }
+
+  .icons {
+    margin: auto;
+  }
+}
