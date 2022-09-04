@@ -40,6 +40,9 @@ menu_btn.addEventListener("click", () => {
     menu.style.width = "100vw";
     closed = false;
   } else {
+    menu.style.width = "0%";
+    menu.style.overflow = "hidden";
+    closed = true;
     const menuLinks = document.querySelectorAll('.enlaces a[href^="#"]');
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener("click", () => {
