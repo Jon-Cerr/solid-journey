@@ -367,6 +367,8 @@ footer {
   margin: auto;
   justify-content: space-around;
   width: 100%;
+  margin: 50px 0;
+
 }
 
 .fa-brands {
@@ -374,10 +376,6 @@ footer {
   color: #fff;
   margin-bottom: var(--espacios);
   display: inline-block;
-}
-
-footer p {
-  margin-top: 60px;
 }
 
 footer .attribution {

@@ -1,8 +1,9 @@
-let nav = document.getElementById("nav");
-let menu = document.getElementById("enlaces");
-let menu_btn = document.getElementById("open");
-let buttons = document.querySelectorAll("btn-header");
+const nav = document.getElementById("nav");
+const menu = document.getElementById("enlaces");
+const menu_btn = document.getElementById("open");
+const buttons = document.querySelectorAll("btn-header");
 let closed = true;
+const menuLinks = document.querySelectorAll('.enlaces a[href^="#"]');
 
 function menus() {
   let Desplz_actual = window.pageYOffset;
@@ -35,6 +36,7 @@ window.addEventListener("resize", () => {
   }
 });
 
+// Permite mostrar/cerrar el menu en dispositivos moviles o tablets
 menu_btn.addEventListener("click", () => {
   if (closed) {
     menu.style.width = "100vw";
@@ -46,17 +48,15 @@ menu_btn.addEventListener("click", () => {
   }
 });
 
-// enlaces
-const menuLinks = document.querySelectorAll('.enlaces a[href^="#"]');
+// Permite hacer que el menu se cierre cuando se hace click en un enlace (devices)
 menuLinks.forEach((menuLink) => {
   menuLink.addEventListener("click", () => {
-    if (closed) {
-      menu.style.width = "100vw";
-      closed = false;
-    } else {
-      menu.style.width = "0%";
-      menu.style.overflow = "hidden";
-      closed = true;
+    if (screen.width <= 700) {
+      if (!closed) {
+        menu.style.width = "0%";
+        menu.style.overflow = "hidden";
+        closed = true;
+      }
     }
   });
 });
